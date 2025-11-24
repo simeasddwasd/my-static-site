@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Unblocked Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  
+  <!-- PARTICLE BACKGROUND (animated) -->
+  <div class="content--canvas" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="26" fill="none"></circle>
+        <path d="M20 36l12-20 12 20-12 8-12-8z" fill="none"></path>
+      </svg>
+      <span class="brand-name">Unblocked Hub</span>
+    </div>
+
+    <nav class="navbar" aria-label="Primary">
+      <button class="nav-btn is-active" data-route="home" aria-current="page">Home</button>
+      <button class="nav-btn" data-route="games">Games</button>
+      <button class="nav-btn" data-route="apps">Apps</button>
+      <button class="nav-btn" data-route="emulator">Emulator</button>
+      <button class="nav-btn" data-route="changelog">Changelog</button>
+    </nav>
+
+    <div class="settings-container">
+      <button class="nav-btn settings-btn" id="settings-btn" aria-label="Settings">⚙️ Settings</button>
+      <div class="settings-dropdown" id="settings-dropdown">
+        <h3>Theme Settings</h3>
+        <div class="settings-links">
+          <article class="settings-card">
+            <div class="card-info">
+              <h4>Default Theme</h4>
+              <p>Current animated background</p>
+            </div>
+            <div class="card-actions">
+              <button class="theme-btn" data-theme="default">Apply</button>
+            </div>
+          </article>
+          <article class="settings-card">
+            <div class="card-info">
+              <h4>Swirl Theme</h4>
+              <p>Purple swirl particles</p>
+            </div>
+            <div class="card-actions">
+              <button class="theme-btn" data-theme="swirl">Apply</button>
+            </div>
+          </article>
+          <article class="settings-card">
+            <div class="card-info">
+              <h4>Pipeline Theme</h4>
+              <p>Teal geometric pipes</p>
+            </div>
+            <div class="card-actions">
+              <button class="theme-btn" data-theme="pipeline">Apply</button>
+            </div>
+          </article>
+          <article class="settings-card">
+            <div class="card-info">
+              <h4>Aurora Theme</h4>
+              <p>Green aurora light rays</p>
+            </div>
+            <div class="card-actions">
+              <button class="theme-btn" data-theme="aurora">Apply</button>
+            </div>
+          </article>
+        </div>
+
+        <h3 style="margin-top: 1.5rem; border-top: 1px solid rgba(255, 223, 128, 0.15); padding-top: 1rem;">Proxy Settings</h3>
+        <div class="settings-links">
+          <div class="settings-card" style="flex-direction: column; align-items: flex-start;">
+            <div class="card-info">
+              <h4>Select Proxy</h4>
+              <p>Choose your preferred proxy service</p>
+            </div>
+            <select id="proxy-select" class="proxy-select">
+              <option value="https://goshadow.net/?utm_source=ubghub.org&utm_medium=referral&utm_campaign=ubghub.org">GoShadow</option>
+              <option value="https://helios-browser.vercel.app">Helios Proxy</option>
+              <option value="https://ultraviolet.vercel.app">Ultraviolet</option>
+              <option value="https://dynamic.titaniumnetwork.org">Titanium Network</option>
+              <option value="https://losbros.liferod.com/">Emerald Proxy</option>
+              <option value="https://glintapp.org/?utm_source=ubghub.org&utm_medium=referral&utm_campaign=ubghub.org">Glint Proxy</option>
+             <option value="https://canlite.org/proxe">Nano Proxy</option>
+            
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP -->
+  <main id="app">
+    <!-- HOME -->
+    <section class="screen" id="home-screen" role="region" aria-label="Home">
+      <div class="hero">
+        <h1>Play, Explore, Customize</h1>
+        <p>i am currently working on this as a side project<br>  but expect more updates. if you have any suggestions email ""@lokloke034@gmail.com" and i will add it. </p>
+        <div class="hero-actions">
+          <button class="pill go-to" data-route="games">Browse Games</button>
+          <button class="pill go-to" data-route="apps">Browse Apps</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES -->
+    <section class="screen is-hidden" id="games-screen" role="region" aria-label="Games">
+      <div class="screen-header">
+        <h2>Games</h2>
+        <button class="back-to-home" data-route="home" aria-label="Go back to Home">← Home</button>
+      </div>
+
+      <div class="card-grid" id="games-list">
+        <!-- === MULTIPLAYER GAMES === -->
+        <article class="card" data-category="multiplayer">
+          <div class="card-info">
+            <h3>Skribbl.io</h3>
+            <p>Multiplayer drawing.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://skribbl.io" data-title="Skribbl.io">Open</button>
+          </div>
+        </article>
+        <!-- === SPORTS GAMES === -->
+        <article class="card" data-category="sports">
+          <div class="card-info">
+            <h3>Retro Bowl College</h3>
+            <p>College football sim.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://ethonion10.neocities.org/" data-title="Retro Bowl College">Open</button>
+          </div>
+        </article>
+        <article class="card" data-category="sports">
+          <div class="card-info">
+            <h3>Retro Bowl</h3>
+            <p>Classic football sim.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://sobloxsy.github.io/retro-bowl/" data-title="Retro Bowl">Open</button>
+          </div>
+        </article>
+        <!-- === MINECRAFT GAMES === -->
+        <article class="card">
+          <div class="card-info">
+            <h3>Minecraft 1.5 (Eagler)</h3>
+            <p>Web MC 1.5.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://eaglercraft.glitch.me/" data-title="Minecraft 1.5 (Eagler)">Open</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-info">
+            <h3>Minecraft 1.8 (Koneclient)</h3>
+            <p>Eagler client 1.8.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://eaglercraft-archive.github.io/Koneclient-1.8-web/" data-title="Minecraft 1.8 (Koneclient)">Open</button>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-info">
+            <h3>Eagler Server List</h3>
+            <p>Servers directory.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://servers.eaglercraft.com/" data-title="Eaglercraft Servers">Open</button>
+          </div>
+        </article>
+<article class="card"><div class="card-info"><h3>Minecraft 1.8 WASM</h3><p>FPS-boosted WASM.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://eaglercraft.com/mc/1.8.8-wasm/" data-title="Minecraft 1.8.8 (WASM)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Minecraft 1.9</h3><p>Web mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x56360a59" data-title="Minecraft 1.9">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Minecraft 1.9 (Server 2)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/1-9.html" data-title="Minecraft 1.9 (Server 2)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Minecraft 1.11</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/1-11.html" data-title="Minecraft 1.11">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Resent Client 1.8</h3><p>Eagler client.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://reslauncher4.vercel.app" data-title="Resent Client Eagler 1.8">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Starlike Client</h3><p>Eagler 1.16-ish.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://starlike.zumbiepig.dev/" data-title="Starlike Client Eagler">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Eaglercraft 1.20</h3><p>Lesson mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dfs3rzq44v6as.cloudfront.net/?frame=fullscreen/#/lessons/964c4358-60a7-4121-908e-63f6ae6e5ef0" data-title="Eaglercraft 1.20">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Eagler Versions & Clients</h3><p>Overview page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x7922b580" data-title="Eagler Versions & Clients">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Block Blast</h3><p>Block puzzle.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://reunbozdo.github.io/" data-title="Block Blast">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Peter Ball</h3><p>Spin meme page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://tenor.com/view/peter-griffin-spin-sphere-spinnin-griffin-swagswo-gif-23628022" data-title="Peter Ball">Open</button></div></article>
+        <!-- === ROBLOX GAMES === -->
+        <article class="card"><div class="card-info"><h3>Roblox (Now.gg 2)</h3><p>Cloud mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dfs3rzq44v6as.cloudfront.net/?frame=fullscreen/#/lessons/550673cd-2d7e-437e-ab86-baa249b52dd0" data-title="Roblox (Now.gg 2)">Open</button></div></article>
+        <article class="card"><div class="card-info"><h3>Roblox (Now.gg 3)</h3><p>Nowgg alt domain.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://nowgg.lol/" data-title="Roblox (Now.gg 3)">Open</button></div></article>
+        <article class="card"><div class="card-info"><h3>Roblox (Now.gg 4)</h3><p>Pathetic-vercel.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://pathetic-roblox-main.vercel.app/" data-title="Roblox (Now.gg 4)">Open</button></div></article>
+        <article class="card"><div class="card-info"><h3>Roblox (Now.gg 5)</h3><p>HTML.cafe host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x8bcb5934" data-title="Roblox (Now.gg 5)">Open</button></div></article>
+        <article class="card"><div class="card-info"><h3>Roblox (Now.gg 6)</h3><p>Render mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://s2g3.onrender.com" data-title="Roblox (Now.gg 6)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Tortilla Games</h3><p>Lesson hub.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dfs3rzq44v6as.cloudfront.net" data-title="Tortilla Games">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Ultraviolet</h3><p>Prxy route.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dfs3rzq44v6as.cloudfront.net/#/prxy" data-title="Ultraviolet">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>FNAW</h3><p>Five Nights at Winston’s.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://g.deev.is/fnaw" data-title="FNAW">Play</button></div></article>
+        <!-- === PUZZLE GAMES === -->
+        <article class="card"><div class="card-info"><h3>1 (Reverse 2048)</h3><p>Number puzzle twist.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/2048/index.html" data-title="1 (Reversed 2048)">Play</button></div></article>
+        <article class="card"><div class="card-info"><h3>Bottle Flip 3D</h3><p>Flip challenge.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/bottle-flip-3d/index.html" data-title="Bottle Flip 3D">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Neal.fun</h3><p>Fun experiments.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://neal.fun" data-title="Neal.fun">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Subway Surfers</h3><p>Runner mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dddavit.github.io/subway/" data-title="Subway Surfers">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Slope</h3><p>Neon downhill.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://mathadventure1.github.io/slope/slope/index.html" data-title="Slope">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Slope 2</h3><p>Gameplayer link.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Slope%202" data-title="Slope 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Slope 3</h3><p>Official host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://slope3.com/" data-title="Slope 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Cookie Clicker (Mirror)</h3><p>Idle classic.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://eli-schwartz.github.io/cookieclicker/" data-title="Cookie Clicker (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Drive Mad</h3><p>Physics trucks.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/drive-mad/play.html" data-title="Drive Mad">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Drive Mad (Server 2)</h3><p>CloudFront mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/drivemad/index.html" data-title="Drive Mad (Server 2)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Drive Mad Mod</h3><p>Fancade level.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://play.fancade.com/63BA239C20C40BF3" data-title="Drive Mad Mod">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>BitLife</h3><p>Life sim (mirror).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/bitlife-life-simulator/play.html" data-title="BitLife">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>ZType</h3><p>Typing shooter.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://zty.pe" data-title="ZType">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>3kh0 (Hub)</h3><p>Lots of games (ads).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://3kh0.github.io" data-title="3kh0 Hub">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Hover Racer Drive</h3><p>Futuristic driving.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/hover-racer-drive/" data-title="Hover Racer Drive">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Monkey Mart</h3><p>Idle market sim.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/monkey-mart/play.html" data-title="Monkey Mart">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Drift Boss</h3><p>Tap to drift.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/drift-boss/" data-title="Drift Boss">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Madalin Stunt Cars 2</h3><p>3D cars & stunts.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg100.github.io/games/Madalin/index.html" data-title="Madalin Stunt Cars 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Henry Stickmin: Bank</h3><p>Flash remaster.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://mountain658.github.io/zbreakingthebank.html" data-title="Breaking the Bank">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Henry: Prison</h3><p>Stickmin escape.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://mountain658.github.io/zescapetheprison.html" data-title="Escaping the Prison">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Henry: Diamond</h3><p>Stealth heist.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://mountain658.github.io/zstealingthediamond.html" data-title="Stealing the Diamond">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Henry: Airship</h3><p>Airship mission (SWF).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf" data-title="Infiltrating the Airship">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Henry: Complex</h3><p>Fleeing SWF.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true" data-title="Fleeing the Complex">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Free Rider HD</h3><p>Bike tracks.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://freeriderhd.com" data-title="Free Rider HD">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Run 3</h3><p>Tunnel runner.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://lekug.github.io/tn6pS9dCf37xAhkJv/" data-title="Run 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Bloxorz</h3><p>Block puzzle (Flash).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ad-freegames.github.io/flash/game/bloxorz.html" data-title="Bloxorz">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Drift Hunters</h3><p>3D drifting.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://htmlxm.github.io/h/drift-hunters/" data-title="Drift Hunters">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Venge.io</h3><p>FPS arena.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://venge.io/" data-title="Venge.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Highway Racer Pro</h3><p>Racing mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/highway-racer-pro.html" data-title="Highway Racer Pro">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Hole.io</h3><p>Absorb the city.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://hole-io.com/" data-title="Hole.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Drift Hunters 2024</h3><p>Updated build.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/drift-hunters-2024.html" data-title="Drift Hunters 2024">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Webcraft</h3><p>Voxel web game.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://jesgran.is-a.dev/webcraft/" data-title="Webcraft">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Sandspiel Studio</h3><p>Falling sand editor.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://studio.sandspiel.club" data-title="Sandspiel Studio">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Blackjack (Yurk)</h3><p>Casino mini.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/black/" data-title="Blackjack">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>FNAF 1</h3><p>Web port.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg77.github.io/fix/fnaf1/" data-title="FNAF 1">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Krunker.io</h3><p>Fast FPS .io.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://krunker.io/" data-title="Krunker.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Tomb of the Mask</h3><p>Arcade maze.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://mountain658.github.io/g/tombofthemask/index.html" data-title="Tomb of the Mask">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Worldguessr</h3><p>Geo guessing.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.worldguessr.com/" data-title="Worldguessr">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>MinecraftSkins</h3><p>Skin browser.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://minecraftskins.net" data-title="MinecraftSkins.net">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Now.gg Games</h3><p>Cloud gaming list.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://now.gg/games.html" data-title="Now.gg Games">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Skindex</h3><p>MC skins alt.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://skindex.pro" data-title="Skindex">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Radio Garden</h3><p>Global radio globe.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://radio.garden/" data-title="Radio Garden">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Windows 93</h3><p>Retro web desktop.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://v1.windows93.net/" data-title="Windows 93">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Mr. Bullet</h3><p>Puzzle shooter.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/mrbullet/" data-title="Mr. Bullet">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Sandspiel</h3><p>Classic falling sand.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://sandspiel.club" data-title="Sandspiel">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Slow Roads</h3><p>Procedural driving.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://slowroads.io" data-title="Slow Roads">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Slow Roads (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/slow-roads/index.html" data-title="Slow Roads (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Edy’s Car Simulator</h3><p>Driving sim.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/edys-car-simulator.html" data-title="Edy’s Car Simulator">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>The Backrooms</h3><p>Web horror port.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://adfree3kh0.github.io/projects/backrooms/index.html" data-title="Backrooms">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Impossible Quiz</h3><p>Viral classic.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Impossible%20Quiz" data-title="Impossible Quiz">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Impossible Quiz (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/impossiblequiz/index.html" data-title="Impossible Quiz (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Among Us (Singleplayer)</h3><p>Fan version.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://adfree3kh0.github.io/projects/among-us/index.html" data-title="Among Us Singleplayer">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Windows XP (Web)</h3><p>Web emulation.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://winxp.vercel.app/" data-title="Windows XP (Web)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Eggy Car (Yurk)</h3><p>Balance the egg.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/eggycar/" data-title="Eggy Car (Yurk)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Eggy Car (Mirror)</h3><p>CloudFront mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/eggy-car/index.html" data-title="Eggy Car (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Turbowarp Packager</h3><p>Build Scratch to HTML.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://packager.turbowarp.org" data-title="Turbowarp Packager">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Bad Piggies</h3><p>Full-screen mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.friv.cm/bad-piggies/fullscreen/" data-title="Bad Piggies">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Cluster Rush</h3><p>Truck jumping.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://duckmath.org/g4m3s/cluster-rush.html" data-title="Cluster Rush">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Crossy Road</h3><p>Frogger vibes.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/crossyroad/index.html" data-title="Crossy Road">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Crossy Road (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/crossyroad/index.html" data-title="Crossy Road (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>1v1.lol (Selenite)</h3><p>Build & fight.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/1v1lol/index.html" data-title="1v1.lol (Selenite)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Bloxd.io</h3><p>Blocky worlds .io.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://bloxd.io" data-title="Bloxd.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>CubeRealm.io</h3><p>Voxel .io game.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://cuberealm.io/" data-title="CubeRealm.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Aim Trainer</h3><p>Sharpen your aim.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://aimtrainer.io/" data-title="Aim Trainer">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 1</h3><p>Sandbox driving.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.gamearter.com/game/scrap-metal/" data-title="Scrap Metal 1">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 2</h3><p>Cars sandbox.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.gamearter.com/game/scrap-metal-2/" data-title="Scrap Metal 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 3</h3><p>Web mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://adfree3kh0.github.io/projects/scrapmetal/index.html" data-title="Scrap Metal 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 4</h3><p>GameArter host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.gamearter.com/game/scrap-metal-4/" data-title="Scrap Metal 4">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 5</h3><p>GameArter host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.gamearter.com/game/scrap-metal-5/" data-title="Scrap Metal 5">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 6</h3><p>GameArter host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.gamearter.com/game/scrap-metal-6/" data-title="Scrap Metal 6">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>GameArter (Hub)</h3><p>Games collection.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.gamearter.com/games" data-title="GameArter">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Obby Robby Only Up</h3><p>Parkour web.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x3d7ef5a3" data-title="Obby Robby Only Up">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>FreezeNova (Hub)</h3><p>Unblocked list.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/index.html" data-title="FreezeNova">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Geometry Dash Lite</h3><p>Web port (lite).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/gdlite/index.html" data-title="Geometry Dash Lite">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>FNAF 2</h3><p>Web port.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/fnaf2/index.html" data-title="FNAF 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>FNAF 3</h3><p>Web port.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/fnaf3/index.html" data-title="FNAF 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>FNAF 4</h3><p>Web port.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/fnaf4/index.html" data-title="FNAF 4">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>FNAF 4 (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/FNAF4/index.html" data-title="FNAF 4 (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Selenite Minecraft</h3><p>Eagler on Selenite.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/eaglercraft/index.html" data-title="Selenite Minecraft">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>MEGA Client</h3><p>Eagler launcher.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://megaclient.vercel.app" data-title="MEGA Client">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>LittleBigSnake</h3><p>io snake upgrade.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://littlebigsnake.com" data-title="LittleBigSnake">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Surviv.io</h3><p>2D battle royale.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://surviv.io" data-title="Surviv.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Spacebar Clicker</h3><p>Click speed test.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/spacebar-clicker.html" data-title="Spacebar Clicker">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Deadshot.io</h3><p>Top-down shooter.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://deadshot.io" data-title="Deadshot.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Clicker JS</h3><p>Simple clicker.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://elucidation.github.io/ClickerJs/" data-title="Clicker JS">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Smash Karts</h3><p>Battle karts .io.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://smashkarts.io" data-title="Smash Karts">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Pixel Force</h3><p>Yurk shooter.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/pixelforce/" data-title="Pixel Force">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Happy Glass</h3><p>Fill the glass.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/happyglass/" data-title="Happy Glass">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Selenite (Hub)</h3><p>Games portal.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/" data-title="Selenite Hub">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Life 1</h3><p>Train your duck.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/ducklife1/index.html" data-title="Duck Life 1">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Life 2</h3><p>More events.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/ducklife2/index.html" data-title="Duck Life 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Life 3</h3><p>Evolution mode.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/ducklife3/index.html" data-title="Duck Life 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Life 4</h3><p>New challenges.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/ducklife4/index.html" data-title="Duck Life 4">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Life 5</h3><p>Treasures & more.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/ducklife5/index.html" data-title="Duck Life 5">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Life 6</h3><p>Space!</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite.cc/semag/ducklife6/index.html" data-title="Duck Life 6">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Stick Running</h3><p>Runner classic.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/stickrunning/" data-title="Stick Running">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Happy Filled Glass</h3><p>Draw to fill.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/happyfilledglass/" data-title="Happy Filled Glass">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Hypackel Games</h3><p>Settings mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/settings.html" data-title="Hypackel Games">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Elastic Man</h3><p>Face stretch toy.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d21u3ic0kp9e91.cloudfront.net/elasticman/0/index.html" data-title="Elastic Man">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Tunnel Rush</h3><p>Speed tunnel.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg44.github.io/TunnelRush/" data-title="Tunnel Rush">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Cookie Clicker 2024</h3><p>Alt build (link page).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/files/cookieclicker/game/index.html" data-title="Cookie Clicker 2024">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Interactive Buddy</h3><p>Physics toy (mirror).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Interactive%20Buddy" data-title="Interactive Buddy">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Baldi's Basics</h3><p>Web port (mirror).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/files/baldisbasics/index.html" data-title="Baldi's Basics">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Minecraft Classic</h3><p>Web classic build.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/files/minecraft-classic/index.html" data-title="Minecraft Classic">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Angry Birds (WebGL)</h3><p>Browser build.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/files/AngryBirdsWebGL/index.html" data-title="Angry Birds WebGL">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Minecraft 1.8 (Gameplayer)</h3><p>Eagler (param link).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?Eaglercraft%20(MC)#" data-title="Minecraft 1.8 (Gameplayer)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Precision Client</h3><p>Eagler client page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/files/projects/precision-client/index.html" data-title="Precision Client">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>2048</h3><p>Number merge classic.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://2048game.com/" data-title="2048">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Flappy Bird (Mirror)</h3><p>Web clone.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/files/flappybird/index.html" data-title="Flappy Bird Mirror">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>1v1.LOL (Param)</h3><p>Param launch page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/gameplayer/index.html?1v1.LOL%20[Needs%20Internet]" data-title="1v1.LOL Param">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Windows 11 (React)</h3><p>Web desktop.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://win11.blueedge.me" data-title="Windows 11 React">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Hypackel 2</h3><p>Hub site.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://hypackel.com" data-title="Hypackel 2">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Hypackel 3</h3><p>GitHub pages hub.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://hypackel.github.io" data-title="Hypackel 3">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Hypackel 4</h3><p>Vercel settings.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://hypackellite.vercel.app/settings.html" data-title="Hypackel 4">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>1v1.LOL (Home)</h3><p>Main site.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://1v1.lol" data-title="1v1.lol (Home)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Impossible Quiz 2</h3><p>Archive SWF.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://archive.org/details/tiq2_swf" data-title="Impossible Quiz 2">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Now.gg (Wayback)</h3><p>Archived now.gg.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://web.archive.org/web/20241112154118/now.gg" data-title="Now.gg (Archived)">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Wayback Machine</h3><p>Web archives.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://web.archive.org" data-title="Wayback Machine">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Astra Client Eagler</h3><p>BarneyCompiler build.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://barneycompiler.github.io/AstraClientEagler/javascript" data-title="Astra Client Eagler">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Tetris (Official)</h3><p>Play Tetris.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://tetris.com/play-tetris" data-title="Tetris">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Glitch Text</h3><p>Text effect tool.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://lingojam.com/GlitchTextGenerator" data-title="Glitch Text Generator">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Barney’s Website</h3><p>HTML.cafe page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x715d6947" data-title="Barney’s Website">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Stickman Swing</h3><p>Physics swing.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.yurk.com/games/stickmanswing" data-title="Stickman Swing">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Google Easter Eggs</h3><p>Fun mini games.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://elgoog.im" data-title="elgooG">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Duck Math</h3><p>Game index.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://duckmath.org/index.html" data-title="Duck Math Games">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Chill Radio</h3><p>Lo-fi channel.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.chilltrax.com/" data-title="Chilltrax">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Tower of Treasure</h3><p>Interland mini-game.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://beinternetawesome.withgoogle.com/en_us/interland/landing/tower-of-treasure" data-title="Tower of Treasure">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Fancy Text</h3><p>Stylish generator.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://lingojam.com/FancyTextGenerator" data-title="Fancy Text Generator">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Yurk.com</h3><p>Games portal.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://yurk.com" data-title="Yurk.com">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Australian Man</h3><p>HTML.cafe page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/xf91164ad" data-title="Australian Man">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>SigmaFart</h3><p>HTML.cafe page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x4922b615" data-title="SigmaFart">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Bottle Flip 3D (Alt)</h3><p>Alt launch page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d3rtzzzsiu7gdr.cloudfront.net/play/index.html?Bottle%20Flip%203D" data-title="Bottle Flip 3D Alt">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Friv.com</h3><p>Games portal.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://friv.com" data-title="Friv">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Download British Man</h3><p>HTML.cafe file page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/xf3b7d5cc" data-title="Download British Man">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>British Man (Roblox)</h3><p>HTML.cafe page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x8a3e2b9b" data-title="British Man Roblox">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Helios Proxy</h3><p>Vercel app.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://helios-browser.vercel.app" data-title="Helios Proxy">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Dingus Proxy</h3><p>HTML.cafe proxy.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x40ceaed5" data-title="Dingus Proxy">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Infinite Tutoring Browser</h3><p>Local type route.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://infinitetutoring.com.au/history/textbook?historicalfigure=browser&type=local" data-title="Infinite Tutoring Browser">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Gulper.io</h3><p>Slither-like.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://gulper.io/" data-title="Gulper.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Infinite Craft</h3><p>Combo sandbox.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://infinite-craft.com/infinite-craft/" data-title="Infinite Craft">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Baldi’s Basics (Method 2)</h3><p>Alt loader.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://igroutka.ru/loader/game/26471/" data-title="Baldi’s Basics Method 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>We Become What We Behold</h3><p>Microstory game.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://gnhustgames.github.io/wbwwb/" data-title="WBWWB">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Time Shooter</h3><p>Bullet-time FPS.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://games.crazygames.com/en_US/time-shooter/index.html" data-title="Time Shooter">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Time Shooter 2</h3><p>Sequel FPS.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://games.crazygames.com/en_US/time-shooter-2/index.html" data-title="Time Shooter 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Time Shooter 3</h3><p>SWAT edition.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://games.crazygames.com/en_US/time-shooter-3-swat/index.html" data-title="Time Shooter 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Chrome Dino</h3><p>Offline dino game.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://htmlxm.github.io/h7/dinosaur-game/" data-title="Chrome Dino">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Getting Over It (Scratch)</h3><p>Scratch port embed.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://turbowarp.org/389464290/embed?autoplay&addons=remove-curved-stage-border,pause,gamepad" data-title="Getting Over It (Scratch)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>1v1.lol (Method 3)</h3><p>Player.work mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://player.work/1v1lol/index.html" data-title="1v1.lol Method 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>HTML.cafe Gallery</h3><p>Public gallery.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/gallery" data-title="HTML.cafe Gallery">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Eaglercraft Clients</h3><p>Client list.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://eaglercraftx1-8.github.io/" data-title="Eaglercraft Clients">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Slither.io</h3><p>Snake .io classic.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="http://slither.com/io" data-title="Slither.io">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Easyfun.gg</h3><p>Game hub.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://easyfun.gg" data-title="Easyfun.gg">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Ballistic</h3><p>Web shooter mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/ballistic/index.html" data-title="Ballistic">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Minecraft Java (mcraft.fun)</h3><p>Web MC launcher.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://mcraft.fun" data-title="Minecraft Java Web">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Mood Tracker</h3><p>Simple tracker (HTML.cafe).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/xb2c91b5a" data-title="Mood Tracker">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Guess The Number</h3><p>Mini game (HTML.cafe).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x63aefeaa" data-title="Guess The Number">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Online HTML Viewer</h3><p>Source extractor.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://spacenerd24.github.io/Online-HTML-Viewer/" data-title="Online HTML Viewer">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Selenite (Copy)</h3><p>Mirror hub.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://selenite-copy.pages.dev" data-title="Selenite Copy">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Astroid.gg</h3><p>Games + Apps + Proxy.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://astroid.gg/" data-title="Astroid.gg">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Always Impostor</h3><p>Among Us mini.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html5.gamedistribution.com/9abe6af0fbb440b98a3e24bf7fb0636a/?gd_sdk_referrer_url=https://kevin.games/always-impostor" data-title="Always Impostor">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Infinite Tutoring Proxy</h3><p>Browser path.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://infinitetutoring.com.au/history/src/browser/" data-title="Infinite Tutoring Proxy">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>2D Space Shooter</h3><p>HTML.cafe game.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x704e8436" data-title="2D Space Shooter">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>WebMC</h3><p>Eagler launcher hub.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://webmc.xyz/" data-title="WebMC">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Vex 3 (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/vex3/index.html" data-title="Vex 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Vex 4 (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/vex4/index.html" data-title="Vex 4">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Vex 6 (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/vex6/index.html" data-title="Vex 6">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Geometry Dash (Real)</h3><p>Nowgg-lol host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://nowgg.lol/apps/robtop-games/1400/geometry-dash.html" data-title="Geometry Dash Cloud">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Stumble Guys (Official)</h3><p>Browser version.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.stumbleguys.com/play" data-title="Stumble Guys">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Stumble Guys (Mirror)</h3><p>Nowgg-lol alt.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://nowgg.lol/apps/kitika-games/7999/stumble-guys.html" data-title="Stumble Guys Mirror">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Cookie Clicker 2024 (Method 2)</h3><p>Another mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://cookieclickerunblocked.github.io/games/cookie-clicker/index.html" data-title="Cookie Clicker 2024 M2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Sandsaga</h3><p>Sandspiel-like.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://sandsaga.com" data-title="Sandsaga">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>BitLife (Server 2)</h3><p>GeometrySpot host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://geometryspot.help/bitlife/1.html" data-title="BitLife (Server 2)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>BitLife (Server 3)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/bitlife/index.html" data-title="BitLife (Server 3)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Scrap Metal 3 (Mirror)</h3><p>CloudFront host.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://d272xss3wq00xu.cloudfront.net/scrapmetal/index.html" data-title="Scrap Metal 3 (Mirror)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>GlacierOS</h3><p>Web desktop.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://learn.englishrealm.ca/" data-title="GlacierOS">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Rocket Bot Royale</h3><p>2D battle royale.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://rocketbotroyale2.winterpixel.io" data-title="Rocket Bot Royale">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Windows 10 (Dustin Brett)</h3><p>WebOS project.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dustinbrett.com/" data-title="Windows 10 Web">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>AaronOS</h3><p>Browser OS.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://aaronos.dev/" data-title="AaronOS">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Windows 96</h3><p>Retro web OS.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://windows96.net/" data-title="Windows 96">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Tinfoil Proxy & Games</h3><p>About:blank cloak.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://assignment.jmwubg.com.au/" data-title="Tinfoil Proxy & Games">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Soundboard</h3><p>Meme sounds.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://sprintingsnail69.github.io/coolsounds/" data-title="Soundboard">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Tortilla Minecraft</h3><p>Lessons link list.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dfs3rzq44v6as.cloudfront.net/#/lessons/ac150b87-7ba6-4b28-b18e-82d034bb521d" data-title="Tortilla Minecraft">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Shell Shockers</h3><p>Egg FPS.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://shellshock.io/" data-title="Shell Shockers">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Moto X3M</h3><p>Bike trials.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/moto-x3m/play.html" data-title="Moto X3M">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Moto X3M 2</h3><p>Sequel (mirror).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://slope-game.github.io/newgame/motox3m-2/" data-title="Moto X3M 2">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Moto X3M 3</h3><p>Another sequel.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://slope-game.github.io/newgame/motox3m-3/" data-title="Moto X3M 3">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Moto X3M Winter</h3><p>S3 mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/games/2024/gm/moto-x3m-winter/index.html" data-title="Moto X3M Winter">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Moto X3M Pool Party</h3><p>S3 mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/games/2024/gm/moto-x3m-pool-party/index.html" data-title="Moto X3M Pool Party">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Moto X3M Spooky Land</h3><p>S3 mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://unblocked-games.s3.amazonaws.com/games/2024/gm/moto-x3m-spooky-land/index.html" data-title="Moto X3M Spooky Land">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Death Run 3D</h3><p>Reaction runner.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/death-run-3d/" data-title="Death Run 3D">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>EggyCar (UBG)</h3><p>Car + egg.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/eggy-car/play.html" data-title="EggyCar UBG">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Stack</h3><p>Stack the tower.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ubg365.github.io/stack/" data-title="Stack">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Super Mario 64</h3><p>N64 browser core.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://downloads.retrostic.com/play.php?console_slug=n64&rom_url=https://downloads.retrostic.com/roms/Super%20Mario%2064%20%28U%29%20%5B%21%5D.zip" data-title="Super Mario 64">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Asteroids (1986)</h3><p>Atari 7800 core.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://downloads.retrostic.com/play.php?console_slug=atari-7800&rom_url=https://downloads.retrostic.com/roms/Asteroids.zip" data-title="Asteroids (1986)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Asteroids (1979)</h3><p>Arcade emulator.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://online-emulators.com/arcade/Asteroids_(rev_2)/asteroid" data-title="Asteroids (1979)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Bosconian</h3><p>RetroGames embed.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.retrogames.cc/embed/42458-bosconian-old-version.html" data-title="Bosconian">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>DOOM (DOS)</h3><p>Browser DOS port.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://bestdosgames.com/games/doom/play" data-title="DOOM (DOS)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Half-Life 1 (WebXash)</h3><p>Web port launcher.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://x8bitrain.github.io/webXash/" data-title="Half-Life 1 Web">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Tetris (NES)</h3><p>NES emulator page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://downloads.retrostic.com/play.php?console_slug=nes&rom_url=https://downloads.retrostic.com/roms/Tetris%20%28USA%29.zip" data-title="Tetris (NES)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>EarthBound (SNES)</h3><p>SNES emulator page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://downloads.retrostic.com/play.php?console_slug=snes&rom_url=https://downloads.retrostic.com/roms/EarthBound%20%28USA%29.zip" data-title="EarthBound (SNES)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Pac-Man (MAME)</h3><p>MAME emulator page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://downloads.retrostic.com/play.php?console_slug=mame&rom_url=https://downloads.retrostic.com/roms/pacman.zip" data-title="Pac-Man (MAME)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>New Rally-X</h3><p>RetroGames embed.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.retrogames.cc/embed/9312-new-rally-x.html" data-title="New Rally-X">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Super Mario Bros (NES)</h3><p>NES emulator page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://downloads.retrostic.com/play.php?console_slug=nes&rom_url=https://downloads.retrostic.com/roms/Super%20Mario%20Bros%20%28E%29.zip" data-title="Super Mario Bros (NES)">Play</button></div></article>
+<article class="card"><div class="card-info"><h3>Entertopia</h3><p>HTML.cafe page.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x92c3d890" data-title="Entertopia">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>GeekTyper</h3><p>Fake hacking prank.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://geektyper.com/" data-title="GeekTyper">Open</button></div></article>
+<article class="card"><div class="card-info"><h3>Rammerhead Proxies</h3><p>Haley School list.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.haleyschool.com/rammerhead-proxies/" data-title="Rammerhead Proxies">Open</button></div></article>
+      </div>
+    </section>
+
+    <!-- APPS -->
+    <section class="screen is-hidden" id="apps-screen" role="region" aria-label="Apps">
+      <div class="screen-header">
+        <h2>Apps</h2>
+        <button class="back-to-home" data-route="home" aria-label="Go back to Home">← Home</button>
+      </div>
+
+      <div class="card-grid" id="apps-list">
+        <!-- === VIDEO/APPS === -->
+        <article class="card">
+          <div class="card-info">
+            <h3>Youtube (no restrictions :D)</h3>
+            <p>Education embed search.</p>
+          </div>
+          <div class="card-actions">
+            <button class="open-in-viewer" data-url="https://www.edu-apps.org/lti_public_resources#/youtube/search" data-title="Youtube (no restrictions :D)">Open</button>
+          </div>
+        </article>
+
+<article class="card"><div class="card-info"><h3>ChatGPT</h3><p>AI chat from OpenAI (Cloudfront mirror).</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://dfs3rzq44v6as.cloudfront.net/apps/27ca35c4-2604-4054-b790-b9436b00d06b/?usr-img=../../assets/img/user.webp" data-title="ChatGPT">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>DeepAI</h3><p>AI tools and image generators.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://deepai.org/" data-title="DeepAI">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Appetize.io Android Phone</h3><p>Run Android emulator in browser.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" data-title="Appetize.io Android Phone">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>HTML Website Extractor</h3><p>View any site’s source code.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://codebeautify.org/source-code-viewer" data-title="HTML Website Extractor">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Snapchat Alt</h3><p>Web Snapchat clone.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://towhidkashem.github.io/snapchat-clone/" data-title="Snapchat Alt">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Virtual Machine (3 mins)</h3><p>Temporary sandbox environment.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.browserling.com/virtual-browser" data-title="Virtual Machine (3 mins)">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Gauth Math Helper</h3><p>AI math problem solver.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://gauthmath.com" data-title="Gauth Math Helper">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>ChatGPT With Sources</h3><p>AI chatbot with citations.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://popai.pro/" data-title="ChatGPT With Sources">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>PS2 Emulator</h3><p>Play PlayStation 2 games online.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://playjs.purei.org/" data-title="PS2 Emulator">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>TV Shows</h3><p>Stream your favorite series.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://tvseries.click/" data-title="TV Shows">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>AI Images</h3><p>Generate AI-powered art.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://nuelink.com/tools/ai-image-generator" data-title="AI Images">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Global Image URL Generator</h3><p>Upload and host images globally.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x2a36ad24" data-title="Global Image URL Generator">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>ChatGPT Alt</h3><p>Alternative GPT chatbot.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://talkai.info/" data-title="ChatGPT Alt">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>YT to MP3</h3><p>Convert YouTube videos to MP3.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ezmp3.cc" data-title="YT to MP3">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>HTML Editor & Downloader</h3><p>Build and save custom HTML pages.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x978c906e" data-title="HTML Editor & Downloader">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Goku (Movies)</h3><p>Watch anime & Dragon Ball series.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://gokutv.pics/" data-title="Goku (Movies)">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>TikTok Alt</h3><p>Lightweight TikTok mirror.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://proxitok.pussthecat.org/" data-title="TikTok Alt">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Discord</h3><p>Chat and communities.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://discord.com/" data-title="Discord">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Better YouTube</h3><p>Unblocked YouTube player.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.youtubeunblocked.live/" data-title="Better YouTube">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Instagram Alt</h3><p>View Instagram content anonymously.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://imginn.com/" data-title="Instagram Alt">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Screen Recorder</h3><p>Record screen in browser.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/xf7a71dd8" data-title="Screen Recorder">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Image URL Generator 2</h3><p>Alternative image hosting tool.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://www.imghippo.com/" data-title="Image URL Generator 2">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>JMW AI Chat</h3><p>Custom chatbot hosted on Infinite Tutoring.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://infinitetutoring.com.au/history/src/AI" data-title="JMW AI Chat">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Notepad in JS</h3><p>Simple online notepad app.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://notepad.js.org/index.html" data-title="Notepad in JS">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Proxy Link Creator</h3><p>Generate proxy-safe links.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://censordodge.com" data-title="Proxy Link Creator">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Make a Proxy Link with Koyeb</h3><p>Host proxies using Koyeb servers.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://html.cafe/x7836dbf6" data-title="Make a Proxy Link with Koyeb">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Bypass Ad Links</h3><p>Skip link shorteners automatically.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://bypass.city" data-title="Bypass Ad Links">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Message Encoder/Decoder</h3><p>Encrypt and decode messages online.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://encoder-decoder-nine.vercel.app/" data-title="Message Encoder/Decoder">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>EmulatorJS</h3><p>Play classic console games in browser.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://demo.emulatorjs.org/" data-title="EmulatorJS">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>SyntaxMeets</h3><p>Collaborative coding environment.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://syntaxmeets.vercel.app/" data-title="SyntaxMeets">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Totally Works :333</h3><p>Fun experimental project site.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://artclass.site/" data-title="Totally Works :333">Open</button></div></article>
+
+<article class="card"><div class="card-info"><h3>Ruffle (Flash Emulator)</h3><p>Play Flash games online.</p></div><div class="card-actions"><button class="open-in-viewer" data-url="https://ruffle.rs/demo/" data-title="Ruffle (Flash Emulator)">Open</button></div></article>
+      </div>
+    </section>
+
+    <!-- CHANGELOG -->
+    <section class="screen is-hidden" id="changelog-screen" role="region" aria-label="Changelog">
+      <div class="screen-header">
+        <h2>Changelog</h2>
+        <button class="back-to-home" data-route="home" aria-label="Go back to Home">← Home</button>
+      </div>
+
+      <div class="card-grid" id="changelog-list">
+        <article class="card">
+          <div class="card-info">
+            <h3>v0.2.0 — Nov 23, 2025</h3>
+            <p>Changelog UI, search bar and more!</p>
+          </div>
+          <div class="card-actions">
+            <button class="changelog-details-btn" data-version="v0.2.0">Details</button>
+          </div>
+          <pre class="changelog-diff" contenteditable="false" aria-hidden="false">
+<span class="diff-removed">- removed non-working apps from apps list </span>
+<span class="diff-removed">- removed categories cause didnt work out</span>
+<span class="diff-added">+ Added Changelog page</span>
+<span class="diff-added">+ added search bar</span>
+<span class="diff-added">+ added proxy selecter in options tab</span>
+<span class="diff-added">+ added custom proxy url input in options tab</span>
+<span class="diff-added">+ added back to top button for scrolling</span>
+<span class="diff-added">+ added proxy speed test</span>
+<span class="diff-added">+ added an ai</span>
+<span class="diff-added">+ added a emulator</span>
+          </pre>
+        </article>
+        
+
+        <article class="card">
+          <div class="card-info">
+            <h3>v0.1.0 — oct 16, 2025</h3>
+            <p>Initial release</p>
+          </div>
+          <div class="card-actions">
+            <button class="changelog-details-btn" data-version="v0.1.0">Details</button>
+          </div>
+          <pre class="changelog-diff" contenteditable="false" aria-hidden="false">
+<span class="diff-added">+ Initial public release </span>
+<span class="diff-removed">- Removed dev-only links from early test version</span>
+          </pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHANGELOG DETAIL MODAL (Full Screen) -->
+    <section class="screen is-hidden" id="changelog-detail-screen" role="region" aria-label="Changelog Detail">
+      <div class="changelog-detail-chrome">
+        <div class="changelog-detail-header">
+          <h2 id="changelog-detail-title">Changelog Detail</h2>
+          <button id="changelog-detail-back" aria-label="Go back">← Back</button>
+        </div>
+        <div class="changelog-detail-content">
+          <p id="changelog-detail-desc" class="changelog-detail-desc"></p>
+          <pre id="changelog-detail-diff" class="changelog-diff" contenteditable="false"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEWER -->
+    <section class="screen is-hidden" id="viewer-screen" role="region" aria-label="Viewer">
+      <div class="viewer-chrome">
+        <div class="viewer-left">
+          <button class="go-back" id="viewer-back" aria-label="Go back">← Go Back</button>
+        </div>
+        <div class="viewer-title" id="viewer-title">Viewer</div>
+        <div class="viewer-right">
+          <button class="reload-view" id="viewer-reload" aria-label="Reload">⟳</button>
+          <button class="reload-view" id="viewer-fullscreen" aria-label="Fullscreen" aria-pressed="false">⛶</button>
+        </div>
+      </div>
+
+      <div class="viewer-frame-wrap">
+        <iframe id="viewer-frame" title="Embedded Content" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ROBOT BUTTON -->
+  <button id="robot-btn" class="robot-btn" aria-label="Open Pickaxe Studio">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <noscript>
+    <p style="text-align:center; padding: 1rem;">
+      This site requires JavaScript to load games and apps.
+    </p>
+  </noscript>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+(() => {
+  const PROXY_URL = "https://goshadow.net/?utm_source=ubghub.org&utm_medium=referral&utm_campaign=ubghub.org";
+
+  function ready(fn){ document.readyState==="loading" ? document.addEventListener("DOMContentLoaded", fn) : fn(); }
+
+  ready(() => {
+    // Avoid duplicates if you paste twice
+    if (document.getElementById("proxy-btn")) return;
+
+    const navbar   = document.querySelector(".site-header .navbar");
+    const appsBtn  = navbar?.querySelector('.nav-btn[data-route="apps"]');
+    const gamesBtn = navbar?.querySelector('.nav-btn[data-route="games"]');
+
+    if (!navbar) return;
+
+    // Make the button
+    const proxyBtn = document.createElement("button");
+    proxyBtn.id = "proxy-btn";
+    proxyBtn.type = "button";
+    proxyBtn.className = "nav-btn";
+    proxyBtn.textContent = "Proxy";
+
+    // Insert it BETWEEN Games and Apps (right before Apps)
+    if (appsBtn) {
+      navbar.insertBefore(proxyBtn, appsBtn);
+    } else if (gamesBtn && gamesBtn.nextSibling) {
+      navbar.insertBefore(proxyBtn, gamesBtn.nextSibling);
+    } else {
+      navbar.appendChild(proxyBtn);
+    }
+
+    // Click => open inside your Viewer UI (with fallback)
+    proxyBtn.addEventListener("click", () => {
+      // Get the selected proxy URL from the dropdown
+      const proxySelect = document.getElementById("proxy-select");
+      const proxyUrl = proxySelect ? proxySelect.value : PROXY_URL;
+
+      const viewer      = document.getElementById("viewer-screen");
+      const viewerTitle = document.getElementById("viewer-title");
+      const viewerFrame = document.getElementById("viewer-frame");
+
+      if (!viewer || !viewerFrame) return;
+
+      // show viewer
+      document.querySelectorAll(".screen").forEach(s => s.classList.add("is-hidden"));
+      viewer.classList.remove("is-hidden");
+      if (viewerTitle) viewerTitle.textContent = "Proxy";
+
+      // permissive iframe settings
+      viewerFrame.setAttribute("sandbox", [
+        "allow-scripts","allow-forms","allow-pointer-lock","allow-popups",
+        "allow-popups-to-escape-sandbox","allow-modals","allow-same-origin",
+        "allow-presentation","allow-downloads"
+      ].join(" "));
+      viewerFrame.setAttribute("allow", [
+        "fullscreen *","autoplay *","gamepad *","encrypted-media *",
+        "clipboard-read *; clipboard-write *"
+      ].join("; "));
+
+      // try iframe first
+      viewerFrame.removeAttribute("src");
+      let loaded = false;
+      const onLoad = () => { loaded = true; viewerFrame.removeEventListener("load", onLoad); };
+      viewerFrame.addEventListener("load", onLoad, { once: true });
+      viewerFrame.src = proxyUrl;
+
+      // fallback to new tab if blocked
+      setTimeout(() => { if (!loaded) window.open(proxyUrl, "_blank", "noopener,noreferrer"); }, 2500);
+    });
+  });
+})();
+    
+    
+</script>
+</body>
+</html>
+https://ubghub.org/?site=mizu
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
